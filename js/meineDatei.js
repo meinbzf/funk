@@ -196,6 +196,17 @@ function nurGespeicherte() {
     bootbox.alert(anzeigeText);
     aktuelleFrage = -1; //später erstes Element anzeigen
     modusNurGespeicherteFragen = true;
+    for (let i = 1; i <= MAX_FRAGEN; i++) {
+            //setze alle angekreuzten Felder zurück
+            document.getElementById(i + "a" + "Text").style.backgroundColor = "white";        
+            document.getElementById(i + "b" + "Text").style.backgroundColor = "white";        
+            document.getElementById(i + "c" + "Text").style.backgroundColor = "white";
+            document.getElementById(i + "d" + "Text").style.backgroundColor = "white";
+            document.getElementById(i + "aRadio").checked = false;            
+            document.getElementById(i + "bRadio").checked = false;            
+            document.getElementById(i + "cRadio").checked = false;            
+            document.getElementById(i + "dRadio").checked = false;
+    }
     blaettern(true);
 }
 
